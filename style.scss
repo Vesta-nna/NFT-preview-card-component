@@ -9,7 +9,6 @@ $line: hsl(215, 32%, 27%);
 
 $white: hsl(0, 0%, 100%);
 
-
 html, body {
   width: 100%;
   height: 100%;
@@ -23,93 +22,18 @@ html, body {
   align-items: center;
 }
 
+// ARTICLE
+
 @media (min-width: 375px) {
-  .card {
+  article {
     width: 70%;
   }
 }
 
 @media (min-width: 1440px) {
-  .card {
+  article {
     width: 20%
   }
-}
-
-.card {
-  margin: auto;
-  padding: 2em 2em 1em 2em;
-  border-radius: 1em;
-  background-color: $card-bg;
-  box-shadow: 0em 1em 1em 1em hsl(215, 54%, 9%);
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-
-.principalImg {
-  cursor: pointer;
-  width: 100%;
-  height: auto;
-  border-radius: .5em;
-}
-
-.overlay {
-  border-radius: .5em;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 99%;
-  width: 100%;
-  opacity: 0;
-  transition: .3s ease;
-  background-color: hsla(178, 100%, 50%, 0.493);
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.icon {
-  color: $white;
-  font-size: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.description {
-  font-size: 18px !important;
-}
-
-h2, .creatorName {
-  color: $white;
-  cursor: pointer;
-  &:hover {
-    color: $font-cyan;
-  }
-}
-
-.cyan {
-  color: $font-cyan;
-  font-weight: 600;
-}
-
-.spaceBetween {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cardInfo {
-  padding-bottom: 1.5em;
-  border-bottom: $line 1px solid;
 }
 
 .center {
@@ -117,28 +41,113 @@ h2, .creatorName {
   align-items: center;
 }
 
-.cardInfo .center img {
-  padding-right: 0.5em;
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
 }
 
-.clock {
-  font-weight: 400;
+article {
+  margin: auto;
+  padding: 2em 2em 1em 2em;
+  border-radius: 1em;
+  background-color: $card-bg;
+  box-shadow: 0em 1em 1em 1em hsl(215, 54%, 9%);
+
+  .clickableImg {
+    position: relative;
+    width: 100%;
+    &:hover .overlay {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: .5em;
+    }
+
+    .overlay {
+      border-radius: .5em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 99%;
+      width: 100%;
+      opacity: 0;
+      transition: .3s ease;
+      background-color: hsla(178, 100%, 50%, 0.493);
+    }
+
+    .icon {
+      color: $white;
+      font-size: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  h2,
+  .creatorName {
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      color: $font-cyan;
+    }
+  }
+
+  .crypto {
+    color: $font-cyan;
+    font-weight: 600;
+  }
+
+  .cardInfo {
+    padding-bottom: 1.5em;
+    border-bottom: $line 1px solid;
+    img {
+      padding-right: 0.5em;
+    }
+  }
+
+  .clock {
+    font-weight: 400;
+  }
+
+  footer {
+    padding-top: 0.5em;
+
+    img {
+      width: 2em;
+      border: $white 1px solid;
+      border-radius: 50%;
+    }
+
+    p {
+      padding-left: 1em;
+    }
+
+    .creatorName {
+      padding-left: 0.2em;
+    }
+  }
 }
 
-.authorInfo {
-  padding-top: 0.5em;
-}
+// FOOTER
 
-.authorInfo img {
-  width: 2em;
-  border: $white 1px solid;
-  border-radius: 50%;
-}
-
-.author {
-  padding-left: 1em;
-}
-
-.creatorName {
-  padding-left: 0.2em;
+footer {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }

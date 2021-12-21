@@ -9,14 +9,10 @@
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <div class="card">
-    <div class="container">
+  <article>
+    <div class="clickableImg">
       <img class="principalImg" src="./images/image-equilibrium.jpg" alt="Equilibrium image">
       <div class="overlay">
         <a href="#" class="icon" title="Image Hover">
@@ -30,19 +26,19 @@
     <p class="description">Our Equilibrium collection promotes balance and calm.</p>
 
     <div class="cardInfo spaceBetween">
-      <div class="cyan center"><img src="./images/icon-ethereum.svg" alt="Ethereum icon"> 0.041 ETH</div>
+      <div class="crypto center"><img src="./images/icon-ethereum.svg" alt="Ethereum icon"> 0.041 ETH</div>
       <div class="clock center"><img src="./images/icon-clock.svg" alt="Clock icon"> 3 days left</div>
     </div>
 
-    <div class="authorInfo center">
+    <footer class="authorInfo center">
       <img src="./images/image-avatar.png" alt="Icon with creator photo">
-      <p class="author">Creation of <span class="creatorName">Jules Wyvern</span></p>
-    </div>
-  </div>
+      <p>Creation of <span class="creatorName">Jules Wyvern</span></p>
+    </footer>
+  </article>
 
-  <div class="attribution">
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Vesta-nna" target="_blank">Anna Dominguez</a>.
-  </div>
+  </footer>
 </body>
 </html>

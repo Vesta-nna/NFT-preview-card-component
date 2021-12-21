@@ -13,37 +13,45 @@ html, body {
 }
 
 @media (min-width: 375px) {
-  .card {
+  article {
     width: 70%;
   }
 }
 @media (min-width: 1440px) {
-  .card {
+  article {
     width: 20%;
   }
 }
-.card {
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
   margin: auto;
   padding: 2em 2em 1em 2em;
   border-radius: 1em;
   background-color: #14253d;
   box-shadow: 0em 1em 1em 1em #0b1523;
 }
-
-.container {
+article .clickableImg {
   position: relative;
   width: 100%;
-  max-width: 400px;
 }
-
-.principalImg {
-  cursor: pointer;
+article .clickableImg:hover .overlay {
+  opacity: 1;
+}
+article .clickableImg img {
   width: 100%;
   height: auto;
   border-radius: 0.5em;
 }
-
-.overlay {
+article .clickableImg .overlay {
   border-radius: 0.5em;
   position: absolute;
   top: 0;
@@ -56,12 +64,7 @@ html, body {
   transition: 0.3s ease;
   background-color: rgba(0, 255, 247, 0.493);
 }
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.icon {
+article .clickableImg .icon {
   color: white;
   font-size: 100px;
   position: absolute;
@@ -71,63 +74,53 @@ html, body {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.description {
-  font-size: 18px !important;
+article .description {
+  font-size: 18px;
 }
-
-h2, .creatorName {
+article h2,
+article .creatorName {
   color: white;
   cursor: pointer;
 }
-h2:hover, .creatorName:hover {
+article h2:hover,
+article .creatorName:hover {
   color: #00fff7;
 }
-
-.cyan {
+article .crypto {
   color: #00fff7;
   font-weight: 600;
 }
-
-.spaceBetween {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cardInfo {
+article .cardInfo {
   padding-bottom: 1.5em;
   border-bottom: #2f415b 1px solid;
 }
-
-.center {
-  display: flex;
-  align-items: center;
-}
-
-.cardInfo .center img {
+article .cardInfo img {
   padding-right: 0.5em;
 }
-
-.clock {
+article .clock {
   font-weight: 400;
 }
-
-.authorInfo {
+article footer {
   padding-top: 0.5em;
 }
-
-.authorInfo img {
+article footer img {
   width: 2em;
   border: white 1px solid;
   border-radius: 50%;
 }
-
-.author {
+article footer p {
   padding-left: 1em;
 }
-
-.creatorName {
+article footer .creatorName {
   padding-left: 0.2em;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: #3e52a3;
 }
 
 /*# sourceMappingURL=style.css.map */
