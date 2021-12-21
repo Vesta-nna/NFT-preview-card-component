@@ -48,7 +48,7 @@ html, body {
 
 article {
   margin: auto;
-  padding: 2em 2em 1em 2em;
+  padding: 1.5em 1.5em 1em 1.5em;
   border-radius: 1em;
   background-color: $card-bg;
   box-shadow: 0em 1em 1em 1em hsl(215, 54%, 9%);
@@ -96,7 +96,7 @@ article {
     font-size: 18px;
   }
 
-  h2,
+  h3,
   .creatorName {
     color: $white;
     cursor: pointer;
@@ -133,21 +133,12 @@ article {
     }
 
     p {
+      font-size: 16px;
       padding-left: 1em;
     }
 
     .creatorName {
       padding-left: 0.2em;
     }
-  }
-}
-
-// FOOTER
-
-footer {
-  font-size: 11px;
-  text-align: center;
-  a {
-    color: hsl(228, 45%, 44%);
   }
 }
